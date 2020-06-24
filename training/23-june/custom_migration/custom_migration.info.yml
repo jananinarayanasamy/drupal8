@@ -1,0 +1,5 @@
+name: 'custom_migration'
+type: module
+description: 'Custom Migration'
+core: 8.x
+package: 'Custom'

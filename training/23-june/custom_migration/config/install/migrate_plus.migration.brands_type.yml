@@ -1,0 +1,13 @@
+id: brands_type
+label: brands_type
+migration_group: custom_migration
+source:
+  plugin: brands_type
+  key: default
+destination:
+  plugin: entity:taxonomy_term
+process:
+  vid:
+    plugin: default_value
+    default_value: tags
+  name: name

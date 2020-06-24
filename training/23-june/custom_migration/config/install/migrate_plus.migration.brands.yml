@@ -1,0 +1,21 @@
+id: brands
+label: brands
+migration_group: custom_migration
+source:
+  plugin: brands
+  key: default
+destination:
+  plugin: entity:node
+process:
+  type:
+    plugin: default_value
+    default_value: article
+  title: name
+  body: description
+  field_tags:
+    plugin: migration
+    migration: brands_type
+    source: brands_type
+migration_dependencies:
+  required:
+    - brands_type
