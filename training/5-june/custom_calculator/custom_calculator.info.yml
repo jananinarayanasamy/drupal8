@@ -1,0 +1,7 @@
+name: Custom Calculator
+description: 'Module to create custom calculator'
+type: module   
+package: custom
+version: '8.x'
+core: '8.x'
+project: 'DrupalTask'

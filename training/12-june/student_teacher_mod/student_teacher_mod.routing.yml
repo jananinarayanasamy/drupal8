@@ -1,0 +1,15 @@
+student_teacher_mod.config_example_add:
+  path: /student-form
+  defaults:
+    _form: 'Drupal\student_teacher_mod\Form\studentServicesFrom'
+    _title: 'Student Form'
+  requirements:
+    _permission: 'access content'
+    
+student_teacher_mod.config_example_view:
+  path: /student-form/view
+  defaults:
+    _form: 'Drupal\student_teacher_mod\Form\studentServicesFromView'
+    _title: 'Student Request List'
+  requirements:
+    _permission: 'access content'        

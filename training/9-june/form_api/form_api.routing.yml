@@ -1,0 +1,7 @@
+form_api.content:
+  path: /custom-form-api
+  defaults:
+    _form: 'Drupal\form_api\Form\customForm'
+    _title: 'Custom Form Creation'
+  requirements:
+    _permission: 'access content'

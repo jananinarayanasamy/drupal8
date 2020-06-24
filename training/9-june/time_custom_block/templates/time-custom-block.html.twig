@@ -1,0 +1,22 @@
+{{ attach_library('time_custom_block/time_custom_block_scripts') }}
+{#
+/**
+* @file
+* Default theme implementation to display a block.
+*
+* @see template_preprocess_block()
+*
+* @ingroup themeable
+*/
+#}
+
+{% set classes = [
+    'clear-both',
+] %}
+<div{{ attributes.addClass(classes) }}>
+    {% for value in Message %}
+        <p>{{value}}</p>
+    {% endfor %}
+ 
+    <div id="display-time"></div>
+</div>

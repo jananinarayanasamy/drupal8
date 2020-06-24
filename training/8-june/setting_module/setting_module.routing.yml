@@ -1,0 +1,15 @@
+setting_module.config_example_add:
+  path: /config-setting
+  defaults:
+    _form: 'Drupal\setting_module\Form\settingForm'
+    _title: 'Setting Custom Configuration'
+  requirements:
+    _permission: 'access content'
+
+setting_module.content:
+  path: '/display-twig/{name}' 
+  defaults: 
+    _controller: '\Drupal\setting_module\Controller\SettingModController::content' 
+    _title: 'Using Twig'
+  requirements: 
+    _permission: 'access content'

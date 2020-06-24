@@ -1,0 +1,31 @@
+<?php
+
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+/**
+ * Redirect on login.
+ */
+ 
+use Drupal\node\NodeInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Access\AccessResult;
+
+function student_teacher_mod_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  if ($account->isAnonymous() && $node->gettype() == 'english') {
+    return AccessResult::forbidden()->cachePerPermissions();
+  }
+  return AccessResult::neutral()->cachePerPermissions();
+}
+ 
+function student_teacher_mod_user_login($account) {
+  $roles = $account->getRoles();
+   
+  if(in_array('student', $roles)) {
+    $response = new RedirectResponse('/student-form');
+    $response->send();
+  }
+  if(in_array('teacher', $roles)) {
+    $response = new RedirectResponse('/student-form/view');
+    $response->send();
+  }
+}

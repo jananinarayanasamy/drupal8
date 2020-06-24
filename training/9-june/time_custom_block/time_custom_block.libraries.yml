@@ -1,0 +1,9 @@
+time_custom_block_scripts:
+  header: false
+  js:
+    js/timejs.js: {}
+  css:
+    theme:
+      css/timecss.css: {}
+  dependencies:
+    - core/jquery 

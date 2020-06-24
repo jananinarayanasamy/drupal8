@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Contains show_recent_time.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function time_custom_block_theme() {
+  return [
+    'time_custom_block' => [
+      'render element' => 'children',
+      'variables' => array(
+        'Message'=>NULL,
+      ),
+    ],
+  ];
+}
+

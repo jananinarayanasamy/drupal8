@@ -1,0 +1,6 @@
+name: Dynamic User
+type: module
+description: Dynamic User Module.
+package: Custom
+version: VERSION
+core: 8.x

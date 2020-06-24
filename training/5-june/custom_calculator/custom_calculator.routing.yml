@@ -1,0 +1,15 @@
+custom_calculator.my_page:
+  path: '/custom/calculator'
+  defaults:
+    _controller: '\Drupal\custom_calculator\Controller\ControllerCalculator::mathFunc'
+    _title: 'Calculator'
+  requirements:
+    _permission: 'access content'
+
+custom_calculator.traits:
+  path: '/custom/calculator/area'
+  defaults:
+    _controller: '\Drupal\custom_calculator\Controller\ControllerArea::calcArea'
+    _title: 'Area Calculator'
+  requirements:
+    _permission: 'access content'

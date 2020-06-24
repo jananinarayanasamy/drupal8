@@ -1,0 +1,4 @@
+services:
+ custom_service_module.insert:
+   class: Drupal\custom_service_module\Services\CustomServiceModule
+   arguments: ['@config.factory']

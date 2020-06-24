@@ -1,0 +1,15 @@
+custom_service_module.config_example_add:
+  path: /custom-service-module
+  defaults:
+    _form: 'Drupal\custom_service_module\Form\customServicesFrom'
+    _title: 'Custom Service Module'
+  requirements:
+    _permission: 'access content'
+    
+custom_service_module.config_example_edit:
+  path: /custom-service-module/{cid}/edit
+  defaults:
+    _form: 'Drupal\custom_service_module\Form\customServicesFromEdit'
+    _title: 'Custom Service Module'
+  requirements:
+    _permission: 'access content'    

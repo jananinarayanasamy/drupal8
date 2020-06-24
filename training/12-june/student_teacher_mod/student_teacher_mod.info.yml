@@ -1,0 +1,8 @@
+name: Student Service Module
+description: 'Module to create Student Access'
+type: module   
+package: custom
+configure: student_teacher_mod.configuration
+version: '8.x'
+core: '8.x'
+project: 'Training'

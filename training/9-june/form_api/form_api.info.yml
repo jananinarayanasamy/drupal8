@@ -1,0 +1,7 @@
+name: Custom Form Module
+description: 'Module to create forms'
+type: module   
+package: custom
+version: '8.x'
+core: '8.x'
+project: 'Training'

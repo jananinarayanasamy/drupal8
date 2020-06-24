@@ -1,0 +1,4 @@
+services:
+ student_teacher_mod.insert:
+   class: Drupal\student_teacher_mod\Services\StudentServiceModule
+   arguments: ['@config.factory']

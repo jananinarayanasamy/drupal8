@@ -1,0 +1,15 @@
+dynamic_user.content:
+  path: '/dynamic-user' 
+  defaults: 
+    _controller: '\Drupal\dynamic_user\Controller\DynamicUserController::userArray' 
+    _title: 'Hello World'
+  requirements: 
+    _permission: 'access content' 
+    
+dynamic_user.displayUser:
+  path: '/user-detail/{uid}' 
+  defaults: 
+    _controller: '\Drupal\dynamic_user\Controller\DynamicUserController::userDetail' 
+  requirements: 
+    _role: 'administrator'
+    

@@ -1,0 +1,5 @@
+name: 'Time Custom Block'
+type: module
+description: 'Display Time'
+core: 8.x
+package: 'Custom'
