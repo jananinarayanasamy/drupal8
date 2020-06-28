@@ -1,0 +1,7 @@
+name: Custom User Form Module
+description: 'To create custom form module'
+type: module   
+package: custom
+version: '8.x'
+core: '8.x'
+project: 'Assignment'

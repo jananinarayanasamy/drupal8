@@ -1,0 +1,7 @@
+userform_module.userform_add:
+  path: /user-form-module
+  defaults:
+    _form: 'Drupal\userform_module\Form\CustomUserFrom'
+    _title: 'User Form'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,5 @@
+services:
+  userform_module.submit_event_subcriber:
+    class: Drupal\userform_module\EventSubscriber\OnSubmitEventSubScriber
+    tags:
+      - { name: 'event_subscriber' }
