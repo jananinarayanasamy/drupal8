@@ -1,0 +1,5 @@
+name: 'custom_user_module'
+type: module
+description: 'This is my custom user module'
+core: 8.x
+package: 'Custom'

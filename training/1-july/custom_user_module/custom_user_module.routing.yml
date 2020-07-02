@@ -1,0 +1,20 @@
+custom_user_module.userform_add:
+  path: /user-form-add
+  defaults:
+    _form: 'Drupal\custom_user_module\Form\UserDetailAdd'
+    _title: 'User Form'
+  requirements:
+    _role: 'authenticated'
+custom_user_module.userform_view:
+  path: /user-list-view
+  defaults:
+    _form: 'Drupal\custom_user_module\Form\UserListView'
+    _title: 'User Form'
+  requirements:
+    _role: 'administrator'
+custom_user_module.userform_profile:
+  path: /users/{uid}
+  defaults:
+    _controller: 'Drupal\custom_user_module\Controller\UserProfile::DisplayData'
+  requirements:
+    _role: 'user'

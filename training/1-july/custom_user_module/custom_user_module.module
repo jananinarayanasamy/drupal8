@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_user_module.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\drupal_set_message;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+/**
+ * Implements hook_help().
+ */
+function custom_user_module_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the custom_user_module module.
+    case 'help.page.custom_user_module':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This is my custom user module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function custom_user_module_user_insert($account) {
+ drupal_set_message('Your account is registered our admin team will look & activate your account');
+   
+}
+
+function custom_user_module_user_login($account) {
+  $roles = $account->getRoles();
+   
+  if(in_array('administrator', $roles)) {
+    $response = new RedirectResponse('/web/user-list-view');
+    $response->send();
+  }else{
+	$response = new RedirectResponse('/web/user-form-add');
+    $response->send();  
+  }
+  
+}
+
+function custom_user_module_theme($existing, $type, $theme, $path) {
+  return [
+    'user_profile' => [
+      'variables' => ['profile' => NULL],
+    ],
+  ];
+}

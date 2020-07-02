@@ -1,0 +1,5 @@
+services:
+  custom_user_module.submit_event_subcriber:
+    class: Drupal\custom_user_module\EventSubscriber\OnSubmitEventSubScriber
+    tags:
+      - { name: 'event_subscriber' }
